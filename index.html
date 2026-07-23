@@ -100,15 +100,40 @@
     .rise2{opacity:0;transform:translateY(14px);animation:rise .7s .28s ease-out forwards}
     @keyframes rise{to{opacity:1;transform:none}}
   }
+
+  .guide-card{border:1px solid var(--line);border-radius:14px;padding:30px;background:rgba(215,255,62,.03)}
+  .kit-embed{border:1px solid var(--line);border-radius:10px;padding:24px;background:rgba(242,242,242,.03);margin-top:8px}
+  .checklist{list-style:none;margin:18px 0 0}
+  .checklist li{padding:8px 0 8px 28px;position:relative;font-size:15.5px}
+  .checklist li::before{content:"//";position:absolute;left:0;color:var(--volt);font-family:var(--mono)}
+  .big-num{font-family:var(--display);font-size:15px;color:var(--volt)}
+  .optin-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:34px;align-items:start}
+  @media (max-width:760px){.optin-grid{grid-template-columns:1fr}}
+  /* free-guide band */
+  .freeband{border:1px solid var(--line);border-radius:12px;padding:28px;display:flex;flex-wrap:wrap;
+            gap:20px;align-items:center;justify-content:space-between;background:rgba(242,242,242,.02)}
+  .freeband h3{font-size:20px}
+  .freeband p{color:var(--graphite);font-size:15px;margin-top:6px;max-width:540px}
+  /* Kit embed overrides so it blends with Ignition */
+  .kit-embed .formkit-form{background:transparent!important;border:0!important;box-shadow:none!important;padding:0!important}
+  .kit-embed .formkit-field input, .kit-embed input[type=email]{width:100%!important;background:#17171A!important;
+    border:1px solid rgba(242,242,242,.2)!important;color:var(--chalk)!important;border-radius:8px!important;
+    padding:13px 16px!important;font-family:var(--body)!important;font-size:15px!important}
+  .kit-embed .formkit-submit, .kit-embed button{background:var(--volt)!important;color:var(--blackout)!important;
+    border-radius:8px!important;font-family:var(--body)!important;font-weight:600!important;border:0!important;
+    padding:13px 22px!important;width:100%!important;margin-top:10px!important}
+  .kit-embed .formkit-submit span{color:var(--blackout)!important}
+  .kit-embed .formkit-powered-by-convertkit, .kit-embed [data-element="powered-by"]{opacity:.35!important}
 </style>
 </head>
 <body>
 <nav><div class="wrap nav-in">
-  <a class="logo" href="index.html">FULL<span>OUT</span></a>
+  <a class="logo" href="/">FULL<span>OUT</span></a>
   <div class="nav-links">
-    <a href="coaching.html">Coaching</a>
-    <a href="about.html" class="hide-m">About</a>
-    <a class="btn btn-volt btn-sm" href="apply.html">Apply</a>
+    <a href="/coaching">Coaching</a>
+    <a href="/free" class="hide-m">Free Guide</a>
+    <a href="/about" class="hide-m">About</a>
+    <a class="btn btn-volt btn-sm" href="/apply">Apply</a>
   </div>
 </div></nav>
 
@@ -118,8 +143,8 @@
     <h1 style="margin-top:22px"><span class="ghost rise">Stop marking.</span><br><span class="rise2">Train full <span class="volt">out.</span></span></h1>
     <p class="lead rise2" style="margin-top:26px">In dance, <em>marking</em> means practicing at half effort — going through the motions. I spent sixteen years as a professional Latin dancer learning to never mark when it counted. Full Out is that standard, applied to your training: built like science, coached with honesty, zero punishment.</p>
     <div class="rise2" style="display:flex;gap:14px;flex-wrap:wrap;margin-top:34px">
-      <a class="btn btn-volt" href="apply.html">Apply for coaching</a>
-      <a class="btn btn-ghost" href="coaching.html">See the programs</a>
+      <a class="btn btn-volt" href="/apply">Apply for coaching</a>
+      <a class="btn btn-ghost" href="/free">Get the free guide</a>
     </div>
   </div>
 </header>
@@ -129,9 +154,9 @@
     <p class="eyebrow"><b>//</b> Three tracks, one standard</p>
     <h2>Pick your fight</h2>
     <div class="grid3">
-      <div class="card"><h3>Reshape</h3><p>Lose fat without hating your life: full-body strength, daily movement targets, and a calorie framework you actually understand. No forbidden foods, no punishment cardio.</p><span class="who">// for fat loss &amp; feeling good again</span></div>
-      <div class="card"><h3>Forte</h3><p>Build muscle and strength on periodized 12-week blocks with an obsession borrowed from championship dance: movement quality first, load second, always progressing.</p><span class="who">// for muscle, strength &amp; PRs</span></div>
-      <div class="card"><h3>Fuel</h3><p>Learn to eat like an athlete fuels: your numbers, calculated; your meals, structured; your habits, tracked. Education over meal plans — no fads, ever.</p><span class="who">// for fixing how you eat</span></div>
+      <div class="card"><h3>Reshape</h3><p>Lose fat without hating your life: full-body strength, daily movement targets, and a calorie framework you actually understand. No forbidden foods, no punishment cardio.</p><span class="who">// <a href="/reshape" style="color:var(--volt);text-decoration:none">for fat loss &amp; feeling good again →</a></span></div>
+      <div class="card"><h3>Forte</h3><p>Build muscle and strength on periodized 12-week blocks with an obsession borrowed from championship dance: movement quality first, load second, always progressing.</p><span class="who">// <a href="/forte" style="color:var(--volt);text-decoration:none">for muscle, strength &amp; PRs →</a></span></div>
+      <div class="card"><h3>Fuel</h3><p>Learn to eat like an athlete fuels: your numbers, calculated; your meals, structured; your habits, tracked. Education over meal plans — no fads, ever.</p><span class="who">// <a href="/fuel" style="color:var(--volt);text-decoration:none">for fixing how you eat →</a></span></div>
     </div>
   </div>
 </section>
@@ -146,7 +171,7 @@
       <div class="cred"><b>BS Sports &amp; Physical Activities</b><span>+ 10 years coaching experience</span></div>
       <div class="cred"><b>NASM-CPT</b><span>CNC, BCS &amp; CES in progress</span></div>
     </div>
-    <p class="muted" style="margin-top:20px;font-size:15px">Sixteen years competing at the highest level of movement — then a sports science degree and NASM certification to coach it properly. <a href="about.html" style="color:var(--volt);text-decoration:none">The full story →</a></p>
+    <p class="muted" style="margin-top:20px;font-size:15px">Sixteen years competing at the highest level of movement — then a sports science degree and NASM certification to coach it properly. <a href="/about" style="color:var(--volt);text-decoration:none">The full story →</a></p>
   </div>
 </section>
 
@@ -169,26 +194,37 @@
     <div class="grid3">
       <div class="tier"><h3>Self-Guided</h3><p class="price">$79 <small>one-time</small></p>
         <ul><li>12-week program, your track &amp; level</li><li>Calorie &amp; macro calculator</li><li>Progress tracker</li><li class="no">No coaching or check-ins</li></ul>
-        <a class="btn btn-ghost" href="coaching.html">Details</a></div>
+        <a class="btn btn-ghost" href="/coaching">Details</a></div>
       <div class="tier core"><span class="flag">Most popular</span><h3>Coached</h3><p class="price">$199<small>/month</small></p>
         <ul><li>Fully custom programming</li><li>Weekly check-ins, written + video feedback</li><li>Macro targets &amp; habit system</li><li>Direct messaging support</li></ul>
-        <a class="btn btn-volt" href="apply.html">Apply now</a></div>
+        <a class="btn btn-volt" href="/apply">Apply now</a></div>
       <div class="tier"><h3>All-In</h3><p class="price">$399<small>/month</small></p>
         <ul><li>Everything in Coached</li><li>Weekly 1:1 video call</li><li>Full nutrition coaching</li><li>Priority form checks &amp; support</li></ul>
-        <a class="btn btn-ghost" href="coaching.html">Details</a></div>
+        <a class="btn btn-ghost" href="/coaching">Details</a></div>
     </div>
   </div>
 </section>
+
+<section><div class="wrap">
+  <div class="freeband">
+    <div>
+      <p class="eyebrow"><b>//</b> Not ready to apply?</p>
+      <h3 style="margin-top:8px">Start with the free guide</h3>
+      <p>The 5 evidence-based moves that actually burn fat — the same principles my coaching clients run, in 10 pages. Free, with the research to back every claim.</p>
+    </div>
+    <a class="btn btn-ghost" href="/free">Get the free guide</a>
+  </div>
+</div></section>
 
 <section>
   <div class="wrap">
     <div class="banner">
       <div>
         <p class="eyebrow"><b>//</b> Launch offer</p>
-        <h3 style="margin-top:8px">The Founding Members — 8 spots</h3>
+        <h3 style="margin-top:8px">Founding Members — 8 spots</h3>
         <p>My first eight coaching clients get 25% off their first three months. In exchange: show up, do the work, and if you're happy at the end, let me tell your story (only with your written consent).</p>
       </div>
-      <a class="btn btn-volt" href="apply.html">Claim a spot</a>
+      <a class="btn btn-volt" href="/apply">Claim a spot</a>
     </div>
   </div>
 </section>
@@ -196,6 +232,14 @@
 <footer><div class="wrap">
   <div class="frow">
     <span class="logo" style="font-size:17px">FULL<span style="color:var(--volt)">OUT</span></span>
+    <span>
+      <a href="/coaching">Coaching</a> &nbsp;·&nbsp;
+      <a href="/free">Free guide</a> &nbsp;·&nbsp;
+      <a href="/about">About</a> &nbsp;·&nbsp;
+      <a href="/apply">Apply</a>
+    </span>
+  </div>
+  <div class="frow" style="margin-bottom:14px">
     <span><a href="mailto:hello@fullout.fit">hello@fullout.fit</a> &nbsp;·&nbsp; <a href="https://instagram.com/fullout_fit">@fullout_fit</a></span>
   </div>
   <p class="disclaimer">Full Out Fitness provides general fitness and nutrition education, not medical advice. Consult a physician before beginning a new exercise or nutrition program, especially if you have a medical condition. Results vary with consistency, starting point, and adherence.</p>
