@@ -100,51 +100,38 @@
     .rise2{opacity:0;transform:translateY(14px);animation:rise .7s .28s ease-out forwards}
     @keyframes rise{to{opacity:1;transform:none}}
   }
-
-  .guide-card{border:1px solid var(--line);border-radius:14px;padding:30px;background:rgba(215,255,62,.03)}
-  .kit-embed{border:1px solid var(--line);border-radius:10px;padding:24px;background:rgba(242,242,242,.03);margin-top:8px}
-  .checklist{list-style:none;margin:18px 0 0}
-  .checklist li{padding:8px 0 8px 28px;position:relative;font-size:15.5px}
-  .checklist li::before{content:"//";position:absolute;left:0;color:var(--volt);font-family:var(--mono)}
-  .big-num{font-family:var(--display);font-size:15px;color:var(--volt)}
-  .optin-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:34px;align-items:start}
-  @media (max-width:760px){.optin-grid{grid-template-columns:1fr}}
-  /* free-guide band */
-  .freeband{border:1px solid var(--line);border-radius:12px;padding:28px;display:flex;flex-wrap:wrap;
-            gap:20px;align-items:center;justify-content:space-between;background:rgba(242,242,242,.02)}
-  .freeband h3{font-size:20px}
-  .freeband p{color:var(--graphite);font-size:15px;margin-top:6px;max-width:540px}
-  /* Kit embed overrides so it blends with Ignition */
-  .kit-embed .formkit-form{background:transparent!important;border:0!important;box-shadow:none!important;padding:0!important}
-  .kit-embed .formkit-field input, .kit-embed input[type=email]{width:100%!important;background:#17171A!important;
-    border:1px solid rgba(242,242,242,.2)!important;color:var(--chalk)!important;border-radius:8px!important;
-    padding:13px 16px!important;font-family:var(--body)!important;font-size:15px!important}
-  .kit-embed .formkit-submit, .kit-embed button{background:var(--volt)!important;color:var(--blackout)!important;
-    border-radius:8px!important;font-family:var(--body)!important;font-weight:600!important;border:0!important;
-    padding:13px 22px!important;width:100%!important;margin-top:10px!important}
-  .kit-embed .formkit-submit span{color:var(--blackout)!important}
-  .kit-embed .formkit-powered-by-convertkit, .kit-embed [data-element="powered-by"]{opacity:.35!important}
 </style>
 </head>
 <body>
 <nav><div class="wrap nav-in">
-  <a class="logo" href="/">FULL<span>OUT</span></a>
+  <a class="logo" href="index.html">FULL<span>OUT</span></a>
   <div class="nav-links">
-    <a href="/coaching">Coaching</a>
-    <a href="/free" class="hide-m">Free Guide</a>
-    <a href="/about" class="hide-m">About</a>
-    <a class="btn btn-volt btn-sm" href="/apply">Apply</a>
+    <a href="coaching.html">Coaching</a>
+    <a href="about.html" class="hide-m">About</a>
+    <a class="btn btn-volt btn-sm" href="apply.html">Apply</a>
   </div>
 </div></nav>
 
-<header style="padding:70px 0 20px"><div class="wrap">
+<style>
+  .optin-hero{padding:70px 0 20px}
+  .guide-card{border:1px solid var(--line);border-radius:14px;padding:30px;background:rgba(215,255,62,.03)}
+  .kit-embed{border:1px dashed rgba(215,255,62,.4);border-radius:10px;padding:26px;text-align:center;background:rgba(215,255,62,.04);margin-top:8px}
+  .kit-embed input{width:100%;max-width:340px;padding:13px 16px;border-radius:8px;border:1px solid var(--line);background:#17171A;color:var(--chalk);font-size:15px;margin-bottom:12px;font-family:var(--body)}
+  .kit-embed .note{font-family:var(--mono);font-size:11px;color:var(--graphite);margin-top:14px}
+  .checklist{list-style:none;margin:18px 0 0}
+  .checklist li{padding:8px 0 8px 28px;position:relative;font-size:15.5px}
+  .checklist li::before{content:"//";position:absolute;left:0;color:var(--volt);font-family:var(--mono)}
+  .big-num{font-family:var(--display);font-size:15px;color:var(--volt)}
+</style>
+
+<header class="optin-hero"><div class="wrap">
   <p class="eyebrow"><b>//</b> Free guide</p>
   <h1 style="font-size:clamp(34px,6vw,64px)">The 5 moves that<br>actually <span class="volt">burn fat</span></h1>
   <p class="lead" style="margin-top:20px">No fads, no punishment cardio, no 30-day miracles. Just the five evidence-based moves that drive fat loss — from a two-time Italian National Champion dancer turned NASM-certified coach. Free, and genuinely good.</p>
 </div></header>
 
 <section style="padding-top:40px"><div class="wrap">
-  <div class="optin-grid">
+  <div style="display:grid;grid-template-columns:1.1fr .9fr;gap:34px;align-items:start" class="optin-grid">
     <div class="guide-card">
       <p class="eyebrow" style="margin-bottom:14px"><b>//</b> What's inside</p>
       <ul class="checklist">
@@ -159,13 +146,7 @@
     </div>
     <div>
       <div class="kit-embed">
-        <p style="font-family:var(--display);text-transform:uppercase;font-size:17px;margin-bottom:8px">Send me the guide</p>
-        <p class="muted" style="font-size:14px;margin-bottom:18px">Free. Straight to your inbox. No spam — unsubscribe anytime.</p>
-        <!-- ============================================================
-             PASTE YOUR KIT JAVASCRIPT EMBED CODE ON THE LINE BELOW
-             (it looks like: <script async data-uid="..." src="..."></script>)
-             ============================================================ -->
-
+        <script async data-uid="9e5261c75d" src="https://full-out-fitness.kit.com/9e5261c75d/index.js"></script>
       </div>
     </div>
   </div>
@@ -174,21 +155,12 @@
 <section><div class="wrap">
   <p class="eyebrow"><b>//</b> Who's sending it</p>
   <h2>Not another internet fitness guy</h2>
-  <p class="lead">Maurizio spent 16 years as a professional Latin dancer — two-time Italian National Champion, top 34 in the world at Blackpool — then earned a sports science degree and NASM certification to coach movement properly. This guide is the real method, not a teaser. <a href="/about" style="color:var(--volt);text-decoration:none">His story →</a></p>
-  <p class="muted" style="margin-top:26px;font-size:15px">Already know you want coaching? <a href="/apply" style="color:var(--volt);text-decoration:none">Skip the guide and apply →</a></p>
+  <p class="lead">Maurizio spent 16 years as a professional Latin dancer — two-time Italian National Champion, top 34 in the world at Blackpool — then earned a sports science degree and NASM certification to coach movement properly. This guide is the real method, not a teaser. <a href="about.html" style="color:var(--volt);text-decoration:none">His story →</a></p>
 </div></section>
 
 <footer><div class="wrap">
   <div class="frow">
     <span class="logo" style="font-size:17px">FULL<span style="color:var(--volt)">OUT</span></span>
-    <span>
-      <a href="/coaching">Coaching</a> &nbsp;·&nbsp;
-      <a href="/free">Free guide</a> &nbsp;·&nbsp;
-      <a href="/about">About</a> &nbsp;·&nbsp;
-      <a href="/apply">Apply</a>
-    </span>
-  </div>
-  <div class="frow" style="margin-bottom:14px">
     <span><a href="mailto:hello@fullout.fit">hello@fullout.fit</a> &nbsp;·&nbsp; <a href="https://instagram.com/fullout_fit">@fullout_fit</a></span>
   </div>
   <p class="disclaimer">Full Out Fitness provides general fitness and nutrition education, not medical advice. Consult a physician before beginning a new exercise or nutrition program, especially if you have a medical condition. Results vary with consistency, starting point, and adherence.</p>
