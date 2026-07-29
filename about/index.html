@@ -25,7 +25,7 @@
   .btn{display:inline-block;font-family:var(--body);font-weight:600;font-size:15.5px;border-radius:8px;
        padding:14px 26px;border:0;cursor:pointer;text-decoration:none;text-align:center}
   .btn:focus-visible,a:focus-visible{outline:2px solid var(--volt);outline-offset:3px}
-  .btn-volt,a.btn-volt,.nav-links a.btn-volt{background:var(--volt);color:#0E0E10 !important}
+  .btn-volt, a.btn-volt, .nav-links a.btn-volt{background:var(--volt);color:#0E0E10 !important}
   .btn-volt:hover{filter:brightness(1.06)}
   .btn-ghost{background:transparent;color:var(--chalk);border:1.5px solid rgba(242,242,242,.35)}
   .btn-ghost:hover{border-color:var(--chalk)}
@@ -101,6 +101,19 @@
     @keyframes rise{to{opacity:1;transform:none}}
   }
 
+  /* photos */
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+  @media (max-width:820px){.about-grid{grid-template-columns:1fr;gap:28px}}
+  .portrait{width:100%;border-radius:14px;display:block;border:1px solid var(--line)}
+  .portrait-wrap{position:relative}
+  .portrait-cap{font-family:var(--mono);font-size:11px;color:var(--graphite);margin-top:10px;letter-spacing:.06em}
+  .photo-band{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:34px}
+  @media (max-width:700px){.photo-band{grid-template-columns:1fr}}
+  .photo-band img{width:100%;height:280px;object-fit:cover;border-radius:12px;border:1px solid var(--line);display:block}
+  .hero-split{display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center}
+  @media (max-width:860px){.hero-split{grid-template-columns:1fr}.hero-split .hero-img{display:none}}
+  .hero-img img{width:100%;border-radius:14px;border:1px solid var(--line);display:block}
+
   .guide-card{border:1px solid var(--line);border-radius:14px;padding:30px;background:rgba(215,255,62,.03)}
   .kit-embed{border:1px solid var(--line);border-radius:10px;padding:24px;background:rgba(242,242,242,.03);margin-top:8px}
   .checklist{list-style:none;margin:18px 0 0}
@@ -142,13 +155,27 @@
   <h1 style="font-size:clamp(34px,5.5vw,58px)">Sixteen years of never <span class="ghost">marking</span> when it <span class="volt">counted</span></h1>
 </div></header>
 
-<section><div class="wrap prose">
+<section><div class="wrap">
+ <div class="about-grid">
+  <div class="prose" style="max-width:none">
   <p class="big">For sixteen years, my job was movement. I competed nationally and internationally as a professional Latin dancer, won the Italian National Championship two years running, and reached the top 34 in the world in the Professional Rising Star category at Blackpool — the most prestigious dance competition on earth.</p>
   <p>Dancers have a word for practicing at half effort: <em>marking</em>. You walk the steps, save the energy, go through the motions. Marking has its place — but championships are decided by who trains <strong>full out</strong> when it matters. That distinction, more than any talent, is what those sixteen years taught me. And it's exactly what most people are missing in the gym: not information, not motivation — a standard.</p>
   <p>Along the way I earned a BS in Sports and Physical Activities and started coaching others, in dance and in fitness, about ten years ago. When I retired from competition, I reinvented myself as a cybersecurity engineer — and discovered that while I could build a career anywhere, my passion lives in one place: the human body and what it can do.</p>
   <p>So I came back to it properly. I refreshed my foundation with the NASM Certified Personal Trainer credential, and I'm currently completing NASM's Certified Nutrition Coach, Behavior Change Specialist, and Corrective Exercise Specialist certifications. Full Out Fitness is everything I learned at the highest level of competitive movement, translated into coaching for real life.</p>
   <blockquote>Train with intention. Eat with understanding. Treat your body like the instrument it is.</blockquote>
   <p class="muted" style="font-size:14px">Trivia for the curious: this business almost launched as "LudoFit" — <em>Ludo</em> from my middle name, Ludovico, and Latin for "I play." A trademark conflict retired the name, but not the idea: training should be something you throw yourself into. Full out.</p>
+  </div>
+  <div class="portrait-wrap">
+    <img class="portrait" src="/images/maurizio-portrait.jpg" alt="Maurizio Conte">
+    <p class="portrait-cap">// Maurizio Conte — NASM-CPT, BS Sports &amp; Physical Activities</p>
+  </div>
+ </div>
+ <div class="photo-band">
+   <img src="/images/dance-1.jpg" alt="Competing in professional Latin dance">
+   <img src="/images/dance-2.jpg" alt="On the competition floor">
+   <img src="/images/training-1.jpg" alt="Coaching and training">
+ </div>
+ <p class="portrait-cap" style="margin-top:14px">// Sixteen years of competition — and what it taught me about training everyone else</p>
 </div></section>
 
 <section><div class="wrap">
